@@ -3,12 +3,14 @@ var inputElement = document.querySelector('#app input');
 var buttonElement = document.querySelector('#app button');
 
 //array todo
-var todos = [
+var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
+
+/*var todos = [
     'fazer café',
     'estudar java Script',
     'acessar comunidade js'
 ];
-
+*/
 function renderTodos(){
 listElement.innerHTML = '';
 
